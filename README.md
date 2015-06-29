@@ -10,6 +10,8 @@ Tutorial to provide information regarding setup of various tools for running dat
   * speedy R like stats
 3. Data Science at the command line
   * without the vagrant
+4. Project Jupyter
+  * I appreciate this project and what it is trying to do with agnosticism.
 
 #Python Implementations - what i am starting to work with
 1. Anaconda
