@@ -2,4 +2,6 @@
 x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 ```
 
-![equation](http://latex.codecogs.com/gif.latex?x&space;=&space;\dfrac{-b&space;\pm&space;\sqrt{b^2&space;-&space;4ac}}{2a})
+\begin{equation}
+  a^2+b^2=c^2
+\end{equation}
