@@ -11,7 +11,7 @@ Tutorial to provide information regarding setup of various tools for running dat
 3. Data Science at the command line
   * without the vagrant
 4. Project Jupyter
-  * I appreciate this project and what it is trying to do with agnosticism.
+  * language agnosticism is brilliant.  would love to see implemented in a Rodeo gui.
 
 #Python Implementations - what i am starting to work with
 1. Anaconda
