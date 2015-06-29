@@ -8,7 +8,12 @@ Tutorial to provide information regarding setup of various tools for running dat
 2. Julia and IJulia
  *speedy R like stats
 
-
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
 
 Anaconda
 ..*contains bundled python libraries
