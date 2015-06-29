@@ -1,13 +1,13 @@
 # setting up the R Studio server
 
 
-##CL script for updating sources
+CL script for updating sources
 ```R
 echo "echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list" | sudo bash
 ```
 
 
-##bash script
+bash script
 ```R
 #!/bin/bash
 #mirror
