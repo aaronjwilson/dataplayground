@@ -10,7 +10,7 @@ Tutorial to provide information regarding setup of various tools for running dat
   * speedy R like stats
 3. Data Science at the command line
   * without the vagrant
-4. Project Jupyter
+4. [Project Jupyter](https://github.com/jupyter/jupyterhub "JUPYTER")
   * language agnosticism is brilliant.  would love to see implemented in a Rodeo gui.
 
 #Python Implementations - what i am starting to work with
