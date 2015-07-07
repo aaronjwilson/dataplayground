@@ -2,17 +2,12 @@
 Building from source code was tricky for me because i did not have a background in CLI or meshing tools together.  The online documentation was good but has been through a few iterations and there are tidbits left over from older versions that no longer apply.  Alas here is my version.  works on ubuntu server or a cloud server.  there is an ami but i wanted to learn how to do it.
 
 the basics of what i will install are:
-1. oracle java
-2. apache tomcat
-3. postgresql
-4. labkey web application
+
+1. Oracel Java
+2. Apache Tomcat
+3. Postgresql
+4. Labkey Web Application
 5. R
-
-
-1. order
-2. list
-3. test
-4. three
 
 Note: some of the code is outdated or written by myself a beginner.  Would like to at some point set this all up in a bash script for easier execution.
 
