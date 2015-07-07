@@ -9,6 +9,11 @@ the basics of what i will install are:
 5. R
 
 
+1. order
+2. list
+3. test
+4. three
+
 Note: some of the code is outdated or written by myself a beginner.  Would like to at some point set this all up in a bash script for easier execution.
 
 ```
