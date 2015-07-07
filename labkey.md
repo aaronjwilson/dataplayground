@@ -1,13 +1,14 @@
 #ubuntu server
 Building from source code was tricky for me because i did not have a background in CLI or meshing tools together.  The online documentation was good but has been through a few iterations and there are tidbits left over from older versions that no longer apply.  Alas here is my version.  works on ubuntu server or a cloud server.  there is an ami but i wanted to learn how to do it.
 
-the basics of what i will install are:  
-1. java - from oracle not the openjdk
-2. tomcat server
+the basics of what i will install are:
+1. oracle java
+2. apache tomcat
 3. postgresql
-4. labkey configuration
+4. labkey web application
 5. R
- 
+
+
 Note: some of the code is outdated or written by myself a beginner.  Would like to at some point set this all up in a bash script for easier execution.
 
 ```
