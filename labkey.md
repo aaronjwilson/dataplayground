@@ -15,6 +15,7 @@ sudo mkdir /usr/local/java /usr/local/tomcat /usr/local/labkey
 ```
 
 #create PATHS
+
 ```
 sudo nano /etc/profile
 ```
@@ -29,6 +30,7 @@ PATH=$PATH:$HOME/bin:$LABKEY_HOME/bin
 PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
 PATH=$PATH:$HOME/bin:$JRE_HOME/bin
 PATH=$PATH:$HOME/bin:$CATALINA_HOME/bin
+#alternatively can be one line
 #PATH=$PATH:$HOME/bin:$JAVA_HOME/bin:$JRE_HOME/bin:$CATALINA_HOME/bin
 export LABKEY_HOME
 export JAVA_HOME
@@ -36,6 +38,10 @@ export JRE_HOME
 export CATALINA_HOME
 export PATH
 ```
+Note: would like to create a sudo echo write for this information.
+See appendix
+echo "echo LABKEY_HOME=/usr/local/labkey >> /etc/profile" | sudo bash
+
 
 #installing java jdk on ubuntu64bit
 this should allow a bypass of accepting licensing queries.
@@ -57,3 +63,46 @@ java -version
 
 #Installing Apache TOMCAT
 as of current labkey implementations there is no mention of TOMCAT v 8.0 in the [supported platforms](https://www.labkey.org/wiki/home/Documentation/page.view?name=supported#tomcat) 
+
+```
+#download the tar file
+wget / http://mirror.olnevhost.net/pub/apache/tomcat/tomcat-7/v7.0.56/bin/apache-tomcat-7.0.57.tar.gz
+```
+
+unzip and install the file to the usr/local/tomcat folder
+it is recommended to create a symbolic link to the version folder but i am just moving out all of the files into the tomcat folder that i made.
+```
+sudo chmod a+x apache-tomcat-7.0.57.tar.gz
+sudo cp apache-tomcat-7.0.57.tar.gz /usr/local/tomcat
+cd /usr/local/tomcat
+sudo tar xzf apache-tomcat-7.0.57.tar.gz
+sudo mv  bin/ conf/ lib/ logs/ temp/ webapps/ work/ $CATALINA_HOME
+#to test the installation
+sudo bin/startup.sh 
+```
+if all works if you migrate to your localhost you should see the apache webhost page.
+
+#installing POSTGRESQL
+it was a bit of a pain on the ami but reboots and updates with help solve this.  
+```
+sudo apt-get update
+sudo apt-get install postgresql
+```
+configuring the database and setting a password
+```
+sudo su postgres
+createuser -P labkey --superuser
+#check rights
+psql
+\du
+#may need to: ALTER ROLE labkey WITH REPLICATION LOGIN;
+\q
+```
+
+#Labkey webapp installation
+procure the most up to date version. (15 as of this writing) 
+
+```
+wget http://labkey.s3.amazonaws.com/downloads/general/r/14.3/LabKey14.3-35337.10-bin.tar.gz
+```
+
