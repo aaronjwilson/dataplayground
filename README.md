@@ -6,6 +6,7 @@ Tutorial to provide information regarding setup of various tools for running dat
 # What I Work With
 1. [R Studio Server](https://github.com/aaronjwilson/dataplayground/blob/master/rStudio.md)
   * packages that i like to work with - links to non linear analysis
+2. [Labkey Server Implementation](./blob/master/labkey.md)
 2. Julia and IJulia
   * speedy R like stats
 3. Data Science at the command line
