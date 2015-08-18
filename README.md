@@ -20,7 +20,9 @@ Hadley Wickham is the Steve Jobs of R implementations.  Anything package he has 
 
 # Labkey Server Setup
 
-[Labkey](https://www.labkey.com "LABKEY") is a very powerful open source web application server used primarily for collaborating on scientific studies.  It is a great format for aggregating, integrating, analyzing and ultimating reporting scientific data.  If there is clear adoption in a collaborative environment it excells at promoting group interaction. This was thoroughly enjoyable to learn to setup on a linux machine and Amazon Web Services.  There is an executable for Windows for those who just want to start straight away.  There is also an Amazon Web Services image (based on Centoos - I believe) which is also a great way to get started.   
+[Labkey](https://www.labkey.com "LABKEY") is a very powerful open source web application server used primarily for collaborating on scientific studies.  It is a great format for aggregating, integrating, analyzing and ultimating reporting scientific data.  If there is clear adoption in a collaborative environment it excells at promoting group interaction.
+
+This was for me a very intense learning gateway.  It was thoroughly enjoyable to learn to setup on a linux machine and Amazon Web Services.  There is an executable for Windows for those who just want to start straight away.  There is also an Amazon Web Services image (based on Centoos - I believe) which is also a great way to get started.   
 
 #Python Implementations - what i am starting to work with
 1. Anaconda
