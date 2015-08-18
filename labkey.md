@@ -81,7 +81,7 @@ sudo mv  bin/ conf/ lib/ logs/ temp/ webapps/ work/ $CATALINA_HOME
 #to test the installation
 sudo bin/startup.sh 
 ```
-if all works if you migrate to your localhost you should see the apache webhost page.
+if all works you can type in localhost and will see the apache web server page.  
 
 #installing POSTGRESQL
 it was a bit of a pain on the ami but reboots and updates with help solve this.  
