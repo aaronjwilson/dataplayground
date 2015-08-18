@@ -104,6 +104,6 @@ psql
 procure the most up to date version. (15 as of this writing) 
 
 ```
-wget http://labkey.s3.amazonaws.com/downloads/general/r/14.3/LabKey14.3-35337.10-bin.tar.gz
+wget http://labkey.s3.amazonaws.com/downloads/general/r/15.2/LabKey15.2-39071.18-bin.tar.gz
 ```
 
