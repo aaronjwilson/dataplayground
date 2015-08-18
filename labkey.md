@@ -1,5 +1,5 @@
 #ubuntu server
-Building from source code was tricky for me because i did not have a background in CLI or meshing tools together.  The online documentation was good but has been through a few iterations and there are tidbits left over from older versions that no longer apply.  Alas here is my version.  works on ubuntu server or a cloud server.  there is an ami but i wanted to learn how to do it.
+Building from source code was tricky for me because i did not have a background in CLI or meshing tools together.  The online documentation was good but has been through a few iterations and there are tidbits left over from older versions that no longer apply.  Alas here is my version.  works very well on Ubuntu server or AWS cloud server.  There is a premade AMI but i needed to learn how to do it for my own edification.
 
 the basics of what i will install are:
 
