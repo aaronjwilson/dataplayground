@@ -1,7 +1,9 @@
-# setting up the R Studio server
-Setting up on an Unbuntu Linux Server.  Information will work well for an amazon ubuntu image.
+# Setting up the R Studio server
+Man do I love working in this IDE.  It is clean, well thought out and just a pleasure to work in.  I hope to show how to set up the base R and the IDE on an Unbuntu Linux Server.  Information will work well for an amazon ubuntu image.
 
-This was tricky because the information is in differenct areas. Two measures need to be taken before installing R on a Linux server.  The first is to establish a source from where your packages will be updated and create a link to the source for updating within the sources list.  The second step is to create a keyserver.    
+This setup was tricky on a headless server because nooby beginnings always pose a challenge.  Starting from nothing the information is spread out and chaotic. Stackoverflow was essential to be able to figure out the correct syntax and nomenclature to make Google queries.  
+
+Two measures need to be taken before installing R on a Linux server.  The first is to establish a source from where your packages will be updated and create a link to the source for updating within the sources list.  The second step is to create a keyserver.    
 
 To establish where your package updates will come from one must add a location to the sources.list in the linux platform. this is done by going to the R cran mirrors site choosing a location and adding "/cran/bin/linux/ubuntu trusty/(or whatever your release version name is (precise, trusty, vivid).
 CL script for updating sources
@@ -48,7 +50,7 @@ $ sudo gdebi rstudio-server-0.99.484-amd64.deb
 ```
 Then simply launch a browser and migrate to http://localhost:8787, login with credentials (that i glossed over but there is more inforamtion in the links.
 
-#links
+#Links
 * https://cran.rstudio.com/bin/linux/ubuntu/README.html
 * http://randyzwitch.com/r-amazon-ec2/
 * https://www.rstudio.com/products/rstudio/download-server/
