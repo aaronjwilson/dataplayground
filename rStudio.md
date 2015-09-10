@@ -3,6 +3,7 @@ Man do I love working in this IDE.  It is clean, well thought out and just a ple
 
 This setup was tricky on a headless server because nooby beginnings always pose a challenge.  Starting from nothing the information is spread out and chaotic. Stackoverflow was essential to be able to figure out the correct syntax and nomenclature to make Google queries.  
 
+#Prefunking
 Two measures need to be taken before installing R on a Linux server.  The first is to establish a source from where your packages will be updated and create a link to the source for updating within the sources list.  The second step is to create a keyserver.    
 
 To establish where your package updates will come from one must add a location to the sources.list in the linux platform. this is done by going to the R cran mirrors site choosing a location and adding "/cran/bin/linux/ubuntu trusty/(or whatever your release version name is (precise, trusty, vivid).
@@ -16,14 +17,15 @@ Create a keyserver for allowing access to ubuntu machine.
 $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 ```
 
-#Finally:Installing R
+#Installing R
 ```R
 $ sudo apt-get install r-base-dev
 ```
 NOTE:this may take a bit of time. 
 
 
-#Launch R and install packages
+#Install your favorite packages
+I am basically a Hadley Wickham devotee so you will see alot of his creations here.  I will be using Labkey as well so there are a couple of extra additions to the pile.  
 ```R
 install.packages(c('ggplot2','plyr', 'dplyr', 'stringr', 'reshape2', 'knitr', 'drc','Rlabkey'), dependencies=TRUE, repos='http://cran.rstudio.com/')
 #should also include data.table with this bunch
