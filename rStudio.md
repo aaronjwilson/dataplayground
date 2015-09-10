@@ -11,8 +11,15 @@ CL script for updating sources
 ```R
 $ echo "echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list" | sudo bash
 ```
+This script is the same but different as
+```
+$ sudo nano /etc/apt/sources.list
+#scroll to bottom and type
+deb http://cran.rstudio.com/bin/linux/ubuntu trusty/
+#save/exit
+```
 
-Create a keyserver for allowing access to ubuntu machine.  
+Create a key signature for ubuntu to recognize the signed packages.  
 ```R
 $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 ```
@@ -27,7 +34,7 @@ NOTE:this may take a bit of time.
 #Install your favorite packages
 I am basically a Hadley Wickham devotee so you will see alot of his creations here.  I will be using Labkey as well so there are a couple of extra additions to the pile.  
 ```R
-install.packages(c('ggplot2','plyr', 'dplyr', 'stringr', 'reshape2', 'knitr', 'drc','Rlabkey'), dependencies=TRUE, repos='http://cran.rstudio.com/')
+> install.packages(c('ggplot2','plyr', 'dplyr', 'stringr', 'reshape2', 'knitr', 'drc','Rlabkey'), dependencies=TRUE, repos='http://cran.rstudio.com/')
 #should also include data.table with this bunch
 ```
 Alternatively one can install packages from command line without launching R through CMD BATCH
