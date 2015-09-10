@@ -16,7 +16,7 @@ $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 
 #Finally:Installing R
 ```R
-$ sudo apt-get install r-base-core r-base-dev
+$ sudo apt-get install r-base-dev
 ```
 NOTE:this may take a bit of time. 
 
