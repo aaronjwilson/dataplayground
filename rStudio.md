@@ -40,7 +40,7 @@ $ sudo apt-get install libcurl4-gnutls-dev libxml2-dev r-cran-xml
 ```
 alway do release updates along the way to fill in the blanks.  
 
-##RStudio Server
+#Let the magic begin: RStudio Server
 If you just want to use R from the terminal space then the above will suffice.  There is some X11 renderings for graphical output but I am still figuring that one out.  In the meantime I would highly recommend the genius IDE of R Studio (Server).  It is a very aesthetically pleasing interface for the R environment which comes with a server flavoring as well. And it is easy to setup.   
 
 ```
@@ -50,9 +50,9 @@ $ cd /tmp
 $ wget https://download2.rstudio.org/rstudio-server-0.99.484-amd64.deb
 $ sudo gdebi rstudio-server-0.99.484-amd64.deb
 ```
-Then simply launch a browser and migrate to http://localhost:8787, login with credentials (that i glossed over but there is more inforamtion in the links.
+Then simply launch a browser and migrate to http://localhost:8787, login with your base credentials (that i glossed over but there is more inforamtion in the links below), and start clicking and typing.
 
-#Links
+#Links: Helpful?
 * https://cran.rstudio.com/bin/linux/ubuntu/README.html
 * http://randyzwitch.com/r-amazon-ec2/
 * https://www.rstudio.com/products/rstudio/download-server/
