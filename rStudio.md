@@ -49,9 +49,9 @@ $ sudo gdebi rstudio-server-0.99.484-amd64.deb
 Then simply launch a browser and migrate to http://localhost:8787, login with credentials (that i glossed over but there is more inforamtion in the links.
 
 #links
-*https://cran.rstudio.com/bin/linux/ubuntu/README.html
-*http://randyzwitch.com/r-amazon-ec2/
-*https://www.rstudio.com/products/rstudio/download-server/
+* https://cran.rstudio.com/bin/linux/ubuntu/README.html
+* http://randyzwitch.com/r-amazon-ec2/
+* https://www.rstudio.com/products/rstudio/download-server/
 
 
 #Side projects for myself learning linux shell
