@@ -81,7 +81,7 @@ sudo mv  bin/ conf/ lib/ logs/ temp/ webapps/ work/ $CATALINA_HOME
 #to test the installation
 sudo bin/startup.sh 
 ```
-if all works you can type in localhost and will see the apache web server page.  
+if all works you can type in http//localhost:8080 and will see the apache web server page.  
 
 #installing POSTGRESQL
 it was a bit of a pain on the ami but reboots and updates with help solve this.  
@@ -99,9 +99,10 @@ psql
 #may need to: ALTER ROLE labkey WITH REPLICATION LOGIN;
 \q
 ```
+I am still learning the navigation and implementation of Postgres but wanted to focus on getting the server up and running to play with data: relegated to bucket list. 
 
 #Labkey webapp installation
-procure the most up to date version. (15 as of this writing) 
+procure the most up to date version. (version 15 as of this writing) 
 
 ```
 wget http://labkey.s3.amazonaws.com/downloads/general/r/15.2/LabKey15.2-39071.18-bin.tar.gz
