@@ -102,7 +102,7 @@ psql
 I am still learning the navigation and implementation of Postgres but wanted to focus on getting the server up and running to play with data: relegated to bucket list. 
 
 #Labkey webapp installation
-procure the most up to date version. (version 15 as of this writing) 
+procure the most up to date version from the Labkey.com website. (version 15 as of this writing) 
 
 ```
 wget http://labkey.s3.amazonaws.com/downloads/general/r/15.2/LabKey15.2-39071.18-bin.tar.gz
