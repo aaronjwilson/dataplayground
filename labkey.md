@@ -93,10 +93,14 @@ configuring the database and setting a password
 ```
 sudo su postgres
 createuser -P labkey --superuser
-#check rights
+```
+We will need to create a password for the labkey user profile. 
+We will need to check the permissions of the labkey account and make some additional alterations
+```
 psql
 \du
-#may need to: ALTER ROLE labkey WITH REPLICATION LOGIN;
+#in my experience the labkey account is lacking in to areas replication and login.  we will add those roles.
+ALTER ROLE labkey WITH REPLICATION LOGIN;
 \q
 ```
 I am still learning the navigation and implementation of Postgres but wanted to focus on getting the server up and running to play with data: relegated to bucket list. 
@@ -105,6 +109,50 @@ I am still learning the navigation and implementation of Postgres but wanted to 
 procure the most up to date version from the Labkey.com website. (version 15 as of this writing) 
 
 ```
-wget http://labkey.s3.amazonaws.com/downloads/general/r/15.2/LabKey15.2-39071.18-bin.tar.gz
+wget http://labkey.s3.amazonaws.com/downloads/general/r/15.2/LabKey15.2-bin.tar.gz
 ```
+chmod. unzip and install
+```
+sudo chmod a+x LabKey
+sudo tar xzf LabKey15.2-bin.tar.gz
+```
+Next we need to move some libraries and files into requisite folders.  we will do this with the wildcard (*.file extension).
 
+```
+sudo cp -r LabKey15.2-bin/tomcat-lib/*.jar $CATALINA_HOME/lib
+sudo cp -r LabKey15.2-bin/{bin,labkeywebapp,modules,pipeline-lib} /usr/local/labkey
+sudo cp LabKey15.2-bin/labkey.xml $CATALINA_HOME/conf/Catalina/localhost
+```
+Now that all the files are in there respective places we will add in some additional information regarding the login to the account
+```
+sudo nano $CATALINA_HOME/conf/Catalina/localhost/labkey.xml
+```
+Information needs to be added where the @@ are located
+```
+@@appdocbase@@  will become /usr/local/labkey/labkeywebapp or $LABKEY_HOME/labkeywebapp 
+@@jdbcUser@@ will become your Postgres user login:  labkey
+@@jdbcPassword@@ will become your password for the Postgres labkey user profile
+```
+And finally there will be some memory optimzations for Java (which I do not understand, but it works)
+```
+sudo nano $CATALINA_HOME/bin/catalina.sh
+#place the following code just above the line that says " #OS specific support
+JAVA_OPTS="$JAVA_OPTS -Xms128m -Xmx2048m -XX:MaxPermSize=256M -XX:-HeapDumpOnOutOfMemoryError"
+```
+And we are done
+reboot your machine and when it comes back online type
+```
+sudo $CATALINA_HOME/bin/startup.sh
+```
+and navigate to localhost:8080/labkey and the server should start.  you will need to load some modules but it is pretty self explanatory from there. 
+Then build your data aggregation lab site
+
+NOTE:  if you host online many ISPs will not support 8080 as a port (AWS will support it). 
+To change this go to 
+```
+sudo nano $CATALINA_HOME/conf/server.xml
+```
+and change port 8080 where it says
+```
+<Connector port="8080" protocol="HTTP/1.1"
+```
